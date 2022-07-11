@@ -3,9 +3,9 @@ int main() {
    int i;
    do
    {
-    printf("entrer un nombre positif: \n");
+    printf("entrer un nombre positif et multiple de 3: \n");
     scanf("%d", &i);
-   } while (i<0);
+   } while ((i<0) || (i % 3 !=0));
    
   
 }
