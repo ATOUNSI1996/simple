@@ -13,7 +13,7 @@ void main() {
     printf("Donner un entier n : ");
     scanf("%d",&n);  
 
-
+//for test 
     //Calcul de la suite
 
     if(n == 0)
