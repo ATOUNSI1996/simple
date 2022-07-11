@@ -15,5 +15,5 @@ int main() {
     scanf("%d",&n);
     printf("la valeur de %d puissance %d est %d",x,n,puissance(x,n)); 
 
-   
+
 }
