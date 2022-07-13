@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <stdlib.h>
 int G1 = 256;
 int G2;
 
@@ -14,13 +14,13 @@ int main()
     p = malloc (sizeof(int));
     q = malloc (2*sizeof(int));
     r = &m;
-    q = &m;
-    q = &n;
-    printf("les adresses de G1, G2, i, j, n, m sont %d %d %d %d %d %d:",&G1,&G2,&i,&j,&n,&m);
-    printf("\n les adresses pointé par p q et r sont : %d %d %d ",p,q,r);
+    *q = m;
+    *(q+1) = n;
+    printf("les adresses de G1, G2, i, j, n, m sont %x %x %x %x %x %x:",&G1,&G2,&i,&j,&n,&m);
+    //printf("\n les adresses pointé par p q et r sont : %d %d %d ",p,q,r);
 
-    free(p);
-    free(q);
+    // free(p);
+    // free(q);
 
 
 }  

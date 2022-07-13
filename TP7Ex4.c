@@ -1,11 +1,11 @@
 #include <stdio.h>
-
+#include <stdlib.h>
 
 int main() 
 {
     int x,n,i,j,num;
-    int *p1 = NULL;
-    int *p2 = NULL;
+    int *p1;
+    int *p2;
     printf("entrer la taille du tableau :\n");
     scanf("%d",&n);
     int *tab;
@@ -14,8 +14,9 @@ int main()
     {
         printf("entrer la valeur %d : ",i);
         scanf("%d",&tab[i]);
-
     }
+    p1 = tab;
+    p2 = tab;
     for(i = 0; i<n; i++)
     {
         printf("%d ",tab[i]);
@@ -27,13 +28,12 @@ int main()
         {
         if(*(p1+i) > *(p2+j))
         {
-            num = *(p2+j);
-            *(p2+j) = *(p1+i);
+            num = *(tab+j);
+            *(tab+j) = *(p1+i);
             *(p1+i) = num;
         }
-        printf("%d ",tab[i]);
-        }
         
+        }
     }
     for(i = 0; i<n; i++)
     {
