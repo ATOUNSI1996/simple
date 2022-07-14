@@ -2,7 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-int precedence(char *ch1,char *ch2)
+int precedence(char *chaine1,char *chaine2)
 {
     int i,n1,n2;  
     char *ch1;
@@ -19,22 +19,27 @@ int precedence(char *ch1,char *ch2)
     scanf("%s",ch2);
     while(*ch1 != '\0' && *ch2 != '\0')
     {
-        if(*ch1 > *ch2)
+        if(*ch1 < *ch2)
         {
-            printf("La chaine ch1 est greater then ch2 \n ");
+            printf("La chaine ch1 precede ch2 \n ");
+            return 1;
+        }
+        else if(*ch1 > *ch2)
+        {
+            printf("La chaine ch2 precede ch1 \n ");
+            return 2;
         }
         else
         {
-            printf("La chaine ch2 est greater then ch1 \n ");
+            printf("Les deux chaines ch1 et ch2 ayant la meme precedence \n ");
+            return 0;
         }
     }
-
-    return ?;
 }
 
 int main() 
 {
     char ch1[10];
     char ch2[10];
-    majuscule(ch1,ch2); 
+    precedence(ch1,ch2); 
 }  
