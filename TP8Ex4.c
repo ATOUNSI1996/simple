@@ -4,7 +4,8 @@
 
 void majuscule(char *chaine)
 {
-    int i,n;
+    int i = 0;
+    int n;
     char *ch;
     ch = malloc (n*sizeof(char));
     printf("entrer la taille n : \n");
@@ -17,6 +18,7 @@ void majuscule(char *chaine)
         {
             *(ch+i)-=32;
         }
+        i++;
     }
 
     // for(i = 0; i < 10; i++)
